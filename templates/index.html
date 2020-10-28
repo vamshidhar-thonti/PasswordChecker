@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Checker</title>
+
+    <link href="../static/styles.css" rel="stylesheet">
+    <link href="../static/favicon.ico" rel="icon">
+</head>
+<body>
+    <form action="submit_form" method="post">
+        <table align="center">
+        <tr>
+            <td><img src="../static/tb_hacked.png"></td>
+            <td><h1>Was your password exposed?</h1></td>
+        </tr>
+        </table>
+        <hr><br><br>
+        <center>Note: None of your passwords are stored in any form.</center> <br> <br>
+        <table align="center">
+            <tr>
+                <td><input class="pass" type="password" id="password" name="password" placeholder="Enter your password" width="100" required></td>
+                <td><input type="image" src="../static/tb_key.png" alt="Submit"></td>
+            </tr>
+        </table>
+        <br> <br>
+        <center id="result">{{ result }}</center>
+        <div class="footer">
+            <footer>
+                This is just a project created as a hobby. The API used here is from <a href="https://haveibeenpwned.com/API/v3">haveibeenpwned.com</a>
+            </footer>
+        </div>
+    </form>
+</body>
+
+</html>
