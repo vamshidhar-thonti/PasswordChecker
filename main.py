@@ -15,7 +15,7 @@ def submit_form():
     if request.method == 'POST':
         data = pwned_api_check(str(request.form['password']))
         if int(data) == 0:
-            result = 'Your password hasn\'t been breached. \N{smiling face with sunglasses}'
+            result = 'Your password hasn\'t been leaked. \N{smiling face with sunglasses}'
         else:
             result = f'Your password has been exposed {data} times. \N{confused face}'
         return render_template('index.html', result=result)
@@ -45,7 +45,9 @@ def pwned_api_check(password):
     response = request_api_data(first5_char)
     return get_password_leaks_count(response, tail)
 
-# if __name__ == '__main__':
+if __name__ == '__main__':
+	app.run(host='0.0.0.0', port=5000)
+
 # for password in input('Enter the password you want to check: ').split():
 #     count = pwned_api_check(password)
 #     if count:

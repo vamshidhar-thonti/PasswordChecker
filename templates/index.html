@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Checker</title>
 
     <link href="../static/styles.css" rel="stylesheet">
@@ -16,10 +17,10 @@
         </tr>
         </table>
         <hr><br><br>
-        <center>Note: None of your passwords are stored in any form.</center> <br> <br>
+        <center>Note: None of your passwords are stored in any form.<br>This page lets you know if a/your password was leaked till now.<br>Enter a password or a random word and click on the key image.</center> <br> <br>
         <table align="center">
             <tr>
-                <td><input class="pass" type="password" id="password" name="password" placeholder="Enter your password" width="100" required></td>
+                <td><input class="pass" type="password" id="password" name="password" placeholder="Enter password or a random word" width="100" required></td>
                 <td><input type="image" src="../static/tb_key.png" alt="Submit"></td>
             </tr>
         </table>
@@ -27,7 +28,7 @@
         <center id="result">{{ result }}</center>
         <div class="footer">
             <footer>
-                This is just a project created as a hobby. The API used here is from <a href="https://haveibeenpwned.com/API/v3">haveibeenpwned.com</a>
+                This is a hobbyist project. The API used here is from <a href="https://haveibeenpwned.com/API/v3">haveibeenpwned.com</a>
             </footer>
         </div>
     </form>
